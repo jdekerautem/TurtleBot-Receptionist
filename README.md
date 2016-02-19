@@ -1,2 +1,2 @@
 # TurtleBot-Receptionist
-Implement a receptionist based on the turtlebot platform
+Implementation of a receptionist based on the turtlebot platform
