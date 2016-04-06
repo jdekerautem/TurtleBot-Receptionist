@@ -1,0 +1,8 @@
+prefix=/home/jerome/catkin_ws/src/ros_opencv_converter/devel
+
+Name: ros_opencv_converter
+Description: Description of ros_opencv_converter
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jerome/catkin_ws/src/ros_opencv_converter/devel/lib 
+Requires: 
