@@ -1,0 +1,136 @@
+Language model created by QuickLM on Wed Apr 20 17:21:20 EDT 2016
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 18 sentences and 30 words
+
+\data\
+ngram 1=30
+ngram 2=48
+ngram 3=35
+
+\1-grams:
+-0.9031 </s> -0.3010
+-0.9031 <s> -0.2361
+-2.1584 AMAZING -0.2430
+-1.6812 CAN -0.2888
+-2.1584 CHARLIE -0.2430
+-2.1584 CREEPY -0.2430
+-1.8573 CUTE -0.2430
+-2.1584 DOING -0.2430
+-2.1584 HELLO -0.2430
+-1.8573 HELP -0.2396
+-2.1584 HELP? -0.2430
+-2.1584 HEY -0.2980
+-2.1584 HI -0.2430
+-1.8573 HOW -0.2794
+-2.1584 IS -0.2980
+-2.1584 ME -0.2430
+-2.1584 ME? -0.2430
+-2.1584 NAME? -0.2430
+-2.1584 REALLY -0.2980
+-2.1584 SO -0.2950
+-2.1584 TALK -0.2980
+-2.1584 TALK? -0.2430
+-2.1584 THERE -0.2430
+-2.1584 TO -0.2980
+-2.1584 WHAT -0.2980
+-2.1584 WIERD -0.2430
+-2.1584 WONDERFUL -0.2430
+-2.1584 WOW -0.2430
+-1.5563 YOU -0.2888
+-2.1584 YOUR -0.2980
+
+\2-grams:
+-1.5563 <s> AMAZING 0.0000
+-1.2553 <s> CAN 0.0000
+-1.5563 <s> CHARLIE 0.0000
+-1.5563 <s> CREEPY 0.0000
+-1.5563 <s> CUTE 0.0000
+-1.5563 <s> HELLO 0.0000
+-1.2553 <s> HELP 0.0000
+-1.5563 <s> HEY 0.0000
+-1.5563 <s> HI 0.0000
+-1.2553 <s> HOW 0.0000
+-1.5563 <s> SO 0.0000
+-1.5563 <s> WHAT 0.0000
+-1.5563 <s> WIERD 0.0000
+-1.5563 <s> WONDERFUL 0.0000
+-1.5563 <s> WOW 0.0000
+-0.3010 AMAZING </s> -0.3010
+-0.3010 CAN YOU -0.0969
+-0.3010 CHARLIE </s> -0.3010
+-0.3010 CREEPY </s> -0.3010
+-0.3010 CUTE </s> -0.3010
+-0.3010 DOING </s> -0.3010
+-0.3010 HELLO </s> -0.3010
+-0.6021 HELP </s> -0.3010
+-0.6021 HELP ME 0.0000
+-0.3010 HELP? </s> -0.3010
+-0.3010 HEY THERE 0.0000
+-0.3010 HI </s> -0.3010
+-0.6021 HOW CAN 0.0000
+-0.6021 HOW YOU -0.2430
+-0.3010 IS YOUR 0.0000
+-0.3010 ME </s> -0.3010
+-0.3010 ME? </s> -0.3010
+-0.3010 NAME? </s> -0.3010
+-0.3010 REALLY TALK? 0.0000
+-0.3010 SO CUTE 0.0000
+-0.3010 TALK TO 0.0000
+-0.3010 TALK? </s> -0.3010
+-0.3010 THERE </s> -0.3010
+-0.3010 TO ME? 0.0000
+-0.3010 WHAT IS 0.0000
+-0.3010 WIERD </s> -0.3010
+-0.3010 WONDERFUL </s> -0.3010
+-0.3010 WOW </s> -0.3010
+-0.9031 YOU DOING 0.0000
+-0.9031 YOU HELP? 0.0000
+-0.9031 YOU REALLY 0.0000
+-0.9031 YOU TALK 0.0000
+-0.3010 YOUR NAME? 0.0000
+
+\3-grams:
+-0.3010 <s> AMAZING </s>
+-0.3010 <s> CAN YOU
+-0.3010 <s> CHARLIE </s>
+-0.3010 <s> CREEPY </s>
+-0.3010 <s> CUTE </s>
+-0.3010 <s> HELLO </s>
+-0.6021 <s> HELP </s>
+-0.6021 <s> HELP ME
+-0.3010 <s> HEY THERE
+-0.3010 <s> HI </s>
+-0.6021 <s> HOW CAN
+-0.6021 <s> HOW YOU
+-0.3010 <s> SO CUTE
+-0.3010 <s> WHAT IS
+-0.3010 <s> WIERD </s>
+-0.3010 <s> WONDERFUL </s>
+-0.3010 <s> WOW </s>
+-0.7782 CAN YOU HELP?
+-0.7782 CAN YOU REALLY
+-0.7782 CAN YOU TALK
+-0.3010 HELP ME </s>
+-0.3010 HEY THERE </s>
+-0.3010 HOW CAN YOU
+-0.3010 HOW YOU DOING
+-0.3010 IS YOUR NAME?
+-0.3010 REALLY TALK? </s>
+-0.3010 SO CUTE </s>
+-0.3010 TALK TO ME?
+-0.3010 TO ME? </s>
+-0.3010 WHAT IS YOUR
+-0.3010 YOU DOING </s>
+-0.3010 YOU HELP? </s>
+-0.3010 YOU REALLY TALK?
+-0.3010 YOU TALK TO
+-0.3010 YOUR NAME? </s>
+
+\end\
