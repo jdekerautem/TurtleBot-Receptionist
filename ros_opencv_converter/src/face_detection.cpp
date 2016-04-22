@@ -27,7 +27,7 @@ const double		TICK_FREQUENCY = cv::getTickFrequency();
 
 class FaceDetector
 {
-	ros::NodeHandle nh_;
+	ros::NodeHandle nh_face;
 	image_transport::ImageTransport it_;
 	image_transport::Subscriber image_sub_;
 	// image_transport::Publisher image_pub_;
@@ -64,7 +64,7 @@ public:
 	// Flag indicating if a face was found
 	bool found_face;
 
-	FaceDetector() : it_(nh_), count_before_displaying(0), average_FPS(0), 
+	FaceDetector() : it_(nh_face), count_before_displaying(0), average_FPS(0), 
 		template_matching_running(false), template_matching_start_time(0), template_matching_current_time(0), 
 		found_face(false), face_cascade_classifier(new cv::CascadeClassifier(FACE_CASCADE_FILE))
 	{
@@ -73,9 +73,9 @@ public:
 		// image_pub_ = it_.advertise("/face_detector/output_video", 1);
 
 		// Topic for Publishing the position of the face. Will buffer 2 messages before throwing away old ones
-		face_positionX_pub_ = nh_.advertise<std_msgs::Int8>("/face_detector/face_position_X", 2);
-		face_positionY_pub_ = nh_.advertise<std_msgs::Int8>("/face_detector/face_position_Y", 2);
-		face_width_pub_ = nh_.advertise<std_msgs::Int8>("/face_detector/face_width", 2);
+		face_positionX_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_position_X", 2);
+		face_positionY_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_position_Y", 2);
+		face_width_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_width", 2);
 	}
 
 	~FaceDetector()
@@ -268,7 +268,7 @@ public:
 	    }
 	    catch (cv_bridge::Exception& e)
 	    {
-	      ROS_ERROR("cv_bridge exception: %s", e.what());
+	      ROS_ERROR("cv_bridge exception with face_detector: %s", e.what());
 	      return;
 	    }
 
@@ -284,6 +284,9 @@ public:
 	    // Find initial face on screen...
 	    if (! found_face) 
 	    {
+	    	std_msgs::Int8 face_width;
+	    	face_width.data = 0;
+	    	face_width_pub_.publish(face_width);
 	        startMeasuringTime();
 	        detectFaceAllSizes(cv_ptr->image); // Detect using cascades over whole image
 	        showFrame(cv_ptr->image); 
