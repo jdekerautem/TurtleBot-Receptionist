@@ -11,8 +11,8 @@ import rospy
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
 from math import copysign
-
 from sound_play.libsoundplay import SoundClient
+     
 
 class voice_cmd_vel:
     def __init__(self):
@@ -36,6 +36,8 @@ class voice_cmd_vel:
         rospy.sleep(1)
         self.soundhandle.stopAll()
         
+          
+               
         
         
         # Initialize the Twist message we will publish.
@@ -49,15 +51,18 @@ class voice_cmd_vel:
         
         # A mapping from keywords to commands.
         self.keywords_to_command = {'stop': ['stop', 'halt', 'abort', 'kill', 'panic', 'off', 'freeze', 'shut down', 'turn off', 'help', 'help me'],
+                                    'bye': ['bye', 'cheers', 'goodbye', 'see you', 'bye'],
+                                    'cafe' : ['cafe', 'campus'],
                                     'hello': ['hi', 'hey', 'hello'],
                                     'help' : ['help me', 'can help', 'help'],
                                     'name' : ['your name', 'name'],                             
-                                    'how' : ['how can', 'how can you', 'how you doing'],
                                     'what' : ['what is', 'what is your', 'what'],
+                                    'wash' : ['washroom', 'toilet'],
+                                    'library' : ['library'],
+                                    'labs' : ['labs'],
                                     'talk': ['talk to me?', 'really talk?', 'you talk', 'you really talk?', 'talk'],                      
-                                    'can' : ['can you', 'can'],
+                                    'how' : ['can you', 'can', 'how can', 'how can you'],
                                     'cute' : ['cute', 'so cute'],
-                                    'creepy' : ['creepy', 'wierd'],
                                     'amazing' : ['amazing', 'wonderful'],                                    
                                     'pause': ['pause speech'],
                                     'continue': ['continue speech']}
@@ -67,9 +72,8 @@ class voice_cmd_vel:
         # We have to keep publishing the cmd_vel message if we want the robot to keep moving.
         while not rospy.is_shutdown():
             self.cmd_vel_pub.publish(self.msg)
-            r.sleep()                       
-            
-    	
+            r.sleep()
+   	
             
     def get_command(self, data):
         for (command, keywords) in self.keywords_to_command.iteritems():
@@ -91,30 +95,43 @@ class voice_cmd_vel:
             return       
         
         if command == 'hello':    
-            self.soundhandle.say("Greetings from your very own Charlie", self.voice)
+            self.soundhandle.say("Greetings! from your very own Charlie. How may I assist you?.", self.voice)
+            rospy.sleep(3)
             
-        if command == 'can' and 'help':
-        	self.soundhandle.say("Sure, how may I help", self.voice)
+        elif command == 'bye':
+        	self.soundhandle.say("Goodbye! See you soon.", self.voice)
+        	rospy.sleep(2)
         
-        if command == 'how':    
-            self.soundhandle.say("Well thank you, this is my first day. How about you", self.voice)
+        if command == 'help':
+        	self.soundhandle.say("I am a receptionist robot. I can answer your questions about the faculty. or guide you through the faculty building.", self.voice)
+        	
                     	
         if command == 'talk':
-        	self.soundhandle.say("Oh! I am talking. Have you seen my brother Wall E", self.voice)
+        	self.soundhandle.say("Oh! I am talking.. Have you seen my brother Wall E?.", self.voice)
         	        	
- 		if command == 'creepy':
- 			self.soundhandle.say("Oh! I am very hurt. Somebody call my mom", self.voice)
+		
         
         if command == 'cute':
         	self.soundhandle.say("Oh my God! I am blushing. You are very kind", self.voice)
             
         if command == 'name':
-        	self.soundhandle.say("My name is charlie. And I love it", self.voice)
+        	self.soundhandle.say("They named me charlie. As if I wanted it. ", self.voice)
        	
        	if command == 'amazing':
-       		self.soundhandle.say("Not as much as you are. But thank you.", self.voice)           
-                
+       		self.soundhandle.say("Not as much as you are. But thank you so much.", self.voice)           
+        
+        if command == 'cafe':
+        	self.soundhandle.say("There is one S U shop right opposite to the library. you can eat or have coffee there", self.voice)      
        
+        if command == 'wash':
+        	self.soundhandle.say("The Gents toilet can be found on the second floor. and a ladies toilet on the third floor.", self.voice)
+    
+        if command == 'library':
+        	self.soundhandle.say("As you will exit out of the Smeaton's building. Take a left. The building in front of you is the library. ", self.voice)
+        
+        if command == 'labs':
+        	self.soundhandle.say("The labs are on third floor of the Smeaton's building. Infact, we might be standing in one of those. You bet, if i am wrong. ", self.voice)
+    
     def cleanup(self):
         # When shutting down be sure to stop the robot!  Publish a Twist message consisting of all zeros.
         twist = Twist()
@@ -128,4 +145,3 @@ if __name__=="__main__":
         voice_cmd_vel()
     except:
         pass
-
