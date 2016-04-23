@@ -1,7 +1,8 @@
 # TurtleBot-Receptionist
 Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot
 
--- After the Pocketsphinx and sound_play packages installed, all the files need to be placed at /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system).
+-- After the Pocketsphinx and sound_play packages installed, all the files need to be placed at /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system). 
+    -> Don't forget to chmod +x ps_voice_nav.py
 
 -- Whenever there is a change in the corpus, update the dictionary and the language model (.dic and .lm) files in the            ps_voice_nav_commands.launch file.
 
