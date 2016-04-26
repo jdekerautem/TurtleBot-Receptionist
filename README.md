@@ -1,6 +1,9 @@
 # TurtleBot-Receptionist
-Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot
-    After the Pocketsphinx and sound_play packages installed, all the files need to be placed at:   
+Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot. 
+
+After the Pocketsphinx and sound_play packages installed, all the files need to be placed at: 
+
+      
     /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system)
     
    
