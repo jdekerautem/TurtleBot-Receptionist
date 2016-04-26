@@ -2,7 +2,7 @@
 Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot
 
 -- After the Pocketsphinx and sound_play packages installed, all the files need to be placed at /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system). 
-    -> Don't forget to chmod +x talkative.py/notsotalkative.py
+    -> Don't forget to chmod +x talkative.py and notsotalkative.py
 
 -- Whenever there is a change in the corpus, update the dictionary and the language model (.dic and .lm) files in the            talkative_3.launch / notsotalkative_3.launch files.
 
