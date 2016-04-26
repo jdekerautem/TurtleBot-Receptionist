@@ -6,9 +6,8 @@ After the Pocketsphinx and sound_play packages installed, all the files need to 
       
     /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system)
     
+-- Don't forget to:
    
-    Don't forget to:
-    
 
     chmod +x talkative.py and notsotalkative.py
 
