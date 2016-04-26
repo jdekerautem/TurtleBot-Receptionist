@@ -9,7 +9,8 @@ After the Pocketsphinx and sound_play packages installed, all the files need to 
 -- Don't forget to:
    
 
-    chmod +x talkative.py and notsotalkative.py
+    chmod +x talkative.py
+    chmod +x notsotalkative.py
 
 -- Whenever there is a change in the corpus, update the dictionary and the language model (.dic and .lm) files in the following:   
 
