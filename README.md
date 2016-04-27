@@ -9,4 +9,5 @@ ROS Packages (indigo) needed in order to have the nodes run:
   - sound_play
   - rosserial_server
   - rosserial_arduino
+  - rosserial_python
   - uvc_camera
