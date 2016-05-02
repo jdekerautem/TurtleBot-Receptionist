@@ -17,5 +17,6 @@ in the root of your catkin workspace. You still need to source ros and your work
 ```sh
 source /opt/ros/indido/devel/setup.bash
 source catkin_workspace/devel/setup.bash
+cd catkin_workspace
 ./initialisation_script_talkative.sh OR ./initialisation_script_NOTsotalkative.sh
 ```
