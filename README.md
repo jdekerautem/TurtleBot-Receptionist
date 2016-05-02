@@ -11,3 +11,11 @@ ROS Packages (indigo) needed in order to have the nodes run:
   - rosserial_arduino
   - rosserial_python
   - uvc_camera
+
+In order to launch all the nodes from a unique command, put all the files in the "shell script" folder
+in the root of your catkin workspace. You still need to source ros and your workspace:
+```sh
+source /opt/ros/indido/devel/setup.bash
+source catkin_workspace/devel/setup.bash
+./initialisation_script_talkative.sh OR ./initialisation_script_NOTsotalkative.sh
+```
