@@ -22,3 +22,8 @@ cd catkin_workspace
 chmod +x *.sh
 ./initialisation_script_talkative.sh OR ./initialisation_script_NOTsotalkative.sh
 ```
+In case of turtlebot bringup throwing an error of name of abse uninitialized, run the following commands:
+```sh
+. /opt/ros/indigo/setup.bash 
+rosrun kobuki_ftdi create_udev_rules
+```
