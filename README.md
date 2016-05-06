@@ -27,3 +27,14 @@ In case of turtlebot bringup throwing an error of name of base uninitialized, ru
 . /opt/ros/indigo/setup.bash 
 rosrun kobuki_ftdi create_udev_rules
 ```
+
+--> To remote-control turtlebot with an Android smartphone, download the app ROS Teleop (Indigo) from Google Play Store.
+After setting the URI of master node to the IP address of the computer:
+```sh
+export ROS_MASTER_URI=http://write.your.IP.address:11311
+```
+Then launch the node remocon:
+```sh
+roslaunch remocon_turtlebot remocon.launch
+```
+If you want to create your own Wifi network on your Ubuntu computer, follow [this link](http://askubuntu.com/questions/490950/create-wifi-hotspot-on-ubuntu)
