@@ -73,15 +73,9 @@ public:
 		// image_pub_ = it_.advertise("/face_detector/output_video", 1);
 
 		// Topic for Publishing the position of the face. Will buffer 2 messages before throwing away old ones
-<<<<<<< HEAD
-		face_positionX_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_position_X", 2);
-		face_positionY_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_position_Y", 2);
-		face_width_pub_ = nh_face.advertise<std_msgs::Int8>("/face_detector/face_width", 2);
-=======
 		face_positionX_pub_ = nh_face.advertise<std_msgs::UInt16>("/face_detector/face_position_X", 2);
 		face_positionY_pub_ = nh_face.advertise<std_msgs::UInt16>("/face_detector/face_position_Y", 2);
 		face_width_pub_ = nh_face.advertise<std_msgs::UInt16>("/face_detector/face_width", 2);
->>>>>>> f2146f717613478f0318e2d14e711e299968b0e7
 	}
 
 	~FaceDetector()
@@ -290,11 +284,7 @@ public:
 	    // Find initial face on screen...
 	    if (! found_face) 
 	    {
-<<<<<<< HEAD
-	    	std_msgs::Int8 face_width;
-=======
 	    	std_msgs::UInt16 face_width;
->>>>>>> f2146f717613478f0318e2d14e711e299968b0e7
 	    	face_width.data = 0;
 	    	face_width_pub_.publish(face_width);
 	        startMeasuringTime();
