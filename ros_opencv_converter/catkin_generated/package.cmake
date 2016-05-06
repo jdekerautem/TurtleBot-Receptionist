@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ros_opencv_converter")
+set(ros_opencv_converter_MAINTAINER "jerome <jerome@todo.todo>")
+set(ros_opencv_converter_DEPRECATED "")
+set(ros_opencv_converter_VERSION "0.0.0")
+set(ros_opencv_converter_BUILD_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensors_msgs" "std_msgs")
+set(ros_opencv_converter_RUN_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensors_msgs" "std_msgs")
+set(ros_opencv_converter_BUILDTOOL_DEPENDS "catkin")

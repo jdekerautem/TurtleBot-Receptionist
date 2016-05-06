@@ -1,0 +1,2 @@
+In order to use the face_detection, start roscore and launch the webcamstream package.
+

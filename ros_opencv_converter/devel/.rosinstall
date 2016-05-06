@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jerome/catkin_ws/src/ros_opencv_converter/devel/setup.sh
