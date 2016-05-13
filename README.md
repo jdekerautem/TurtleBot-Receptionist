@@ -1,7 +1,7 @@
 # TurtleBot-Receptionist
-Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot. 
+This project consists in implementing a receptionist based on the turtlebot by Kobuki. This receptionist can also be used as a charity fundraiser. 
 
-After the Pocketsphinx and sound_play packages installed, all the files need to be placed at: 
+The face tracking ability of this robot is based on Opencv 3.0 libraries.
 
 ROS Packages (indigo) needed in order to have the nodes run:
   - openni2_launch
