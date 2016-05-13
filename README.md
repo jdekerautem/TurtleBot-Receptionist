@@ -4,7 +4,7 @@ This project consists in implementing a receptionist based on the turtlebot by K
 The face tracking ability of this robot is based on Opencv 3.0 libraries.
 
 ROS Packages (indigo) needed in order to have the nodes run:
-  - openni2_launch
+  - openni2_launch (for using the Asus Xtion kinect-like sensor. However not used in this project)
   - pocketsphinx
   - sound_play
   - rosserial_server
@@ -12,7 +12,7 @@ ROS Packages (indigo) needed in order to have the nodes run:
   - rosserial_python
   - uvc_camera
   - turtlebot-bringup
-  - turtlebot-teleop (for remote-control the turtlebot)
+  - turtlebot-teleop (for remote-controlling the turtlebot)
 
 In order to launch all the nodes from a unique command, put all the files in the "shell script" folder
 in the root of your catkin workspace. You still need to source ros and your workspace:
