@@ -1,5 +1,0 @@
-<!-- roslaunch pkg_name file.launch -->
-<launch>
-	<!-- type: name of executable   respawn: restarts the node if it quits -->
-	<node name="remocon_node" pkg="remocon_turtlebot" type="remocon_module.py" respawn="false" />
-</launch>
