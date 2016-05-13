@@ -1,8 +1,9 @@
 # TurtleBot-Receptionist
-Implementation of a receptionist based on the turtlebot platform
+Details on the Speech-interface package respnsible for speech recognition and generation of Turtelbot. 
 
-This project runs on OpenCV 3.0 libraries
+After the Pocketsphinx and sound_play packages installed, all the files need to be placed at: 
 
+<<<<<<< HEAD
 ROS Packages (indigo) needed in order to have the nodes run:
   - openni2_launch
   - pocketsphinx
@@ -57,6 +58,9 @@ How to run FACE_DETECTION -- Make sure you are in catkin workspace directory:
 Details on the Speech-interface package responsible for speech recognition and generation of Turtelbot. 
 
 After the Pocketsphinx and sound_play packages installed, all the files need to be placed at: 
+=======
+      
+>>>>>>> Speech-interface
     /opt/ros/indigo/share/pocketsphinx/demo (If that's same with your system)
     
 -- Don't forget to:
