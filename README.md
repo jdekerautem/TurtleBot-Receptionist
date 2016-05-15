@@ -30,6 +30,7 @@ rosrun kobuki_ftdi create_udev_rules
 ```
 
 -----> To run face_detection:
+
 Edit CMakeLists.txt: modify SET(OpenCV_INCLUDE_DIRS ) accordingly to your installation
 
 Before running any file, and for any new terminal you open, source your catkin workspace:
