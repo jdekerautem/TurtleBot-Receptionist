@@ -39,7 +39,7 @@ Before running any file, and for any new terminal you open, source your catkin w
 
 How to run FACE_DETECTION -- Make sure you are in catkin workspace directory, and that your webcam is plugged in.
 In case you have more than one camera plugged into the computer, you would need to choose which one to use by modifying 
-the parameter "value" at line 7 of webcamstream/launch/uvcCamLaunch.launch:
+the parameter "value" at line 7 of webcamstream/launch/uvcCamLaunch.launch (default value: /dev/video0). Then run:
 
     roslaunch webcamstream uvc_cam.launch
     rosrun ros_opencv_converter face_detection
