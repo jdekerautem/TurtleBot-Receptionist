@@ -82,8 +82,15 @@ On the local computer, set the URI of master node to the IP address of the local
 ```sh
 export ROS_MASTER_URI=http://write.your.IP.address:11311
 ```
-Then, on the remote laptop, launch the node turtlebot_teleop:
+Then, on the remote laptop, launch the node turtlebot_teleop to steer the platform:
 ```sh
 roslaunch turtlebot-teleop keyboard_teleop.launch
 ```
+In order to play the wav files from the remote laptop, first put the folder containing the wav files in the /opt/ros/indigo/share/pockestphinx folder on the local computer. Then, on the remote laptop:
+```sh
+rosrun sound_play sound_play_node.py
+rosrun sound_play play.py /opt/ros/indigo/share/pocketsphinx/wav_files/normal_hello.wav
+```
+for example.
+
 If you want to create your own wifi network on your ubuntu computer, follow [this link](http://askubuntu.com/questions/490950/create-wifi-hotspot-on-ubuntu)
