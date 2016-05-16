@@ -3,6 +3,8 @@ This project consists in implementing a receptionist based on the turtlebot by K
 
 The face tracking ability of this robot is based on Opencv 3.0 libraries.
 
+The Android application for the blinking eyes Charlie_Face_App.aia can be opened with
+
 ROS Packages (indigo) needed in order to have the nodes run:
   - openni2_launch (for using the Asus Xtion kinect-like sensor. However not used in this project)
   - pocketsphinx
