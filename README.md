@@ -84,6 +84,7 @@ export ROS_MASTER_URI=http://write.your.IP.address:11311
 ```
 Then, on the remote laptop, launch the node turtlebot_teleop to steer the platform:
 ```sh
+ssh <login>@<IP address>
 roslaunch turtlebot-teleop keyboard_teleop.launch
 ```
 In order to play the wav files from the remote laptop, first put the folder containing the wav files in the /opt/ros/indigo/share/pockestphinx folder on the local computer, and run this command:
@@ -92,6 +93,7 @@ rosrun sound_play sound_play_node.py
 ```
 Then, on the remote laptop:
 ```sh
+ssh <login>@<IP address>
 rosrun sound_play play.py /opt/ros/indigo/share/pocketsphinx/wav_files/normal_hello.wav
 ```
 for example.
